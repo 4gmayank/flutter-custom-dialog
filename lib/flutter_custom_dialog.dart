@@ -117,21 +117,23 @@ class YYDialog {
         child: Row(
           mainAxisAlignment: getRowMainAxisAlignment(gravity),
           children: <Widget>[
-            FlatButton(
+            TextButton(
               onPressed: () {
                 if (onTap1 != null) onTap1();
                 if (isClickAutoDismiss) {
                   dismiss();
                 }
               },
-              padding: buttonPadding1,
-              child: Text(
-                text1 ?? "",
-                style: TextStyle(
-                  color: color1 ?? null,
-                  fontSize: fontSize1 ?? null,
-                  fontWeight: fontWeight1,
-                  fontFamily: fontFamily1,
+              child: Container(
+                padding: buttonPadding1,
+                child: Text(
+                  text1 ?? "",
+                  style: TextStyle(
+                    color: color1 ?? null,
+                    fontSize: fontSize1 ?? null,
+                    fontWeight: fontWeight1,
+                    fontFamily: fontFamily1,
+                  ),
                 ),
               ),
             ),
@@ -139,21 +141,24 @@ class YYDialog {
               visible: withDivider,
               child: VerticalDivider(),
             ),
-            FlatButton(
+            TextButton(
               onPressed: () {
                 if (onTap2 != null) onTap2();
                 if (isClickAutoDismiss) {
                   dismiss();
                 }
               },
-              padding: buttonPadding2,
-              child: Text(
-                text2 ?? "",
-                style: TextStyle(
-                  color: color2 ?? Colors.black,
-                  fontSize: fontSize2 ?? 14.0,
-                  fontWeight: fontWeight2,
-                  fontFamily: fontFamily2,
+
+              child: Container(
+                padding: buttonPadding2,
+                child: Text(
+                  text2 ?? "",
+                  style: TextStyle(
+                    color: color2 ?? Colors.black,
+                    fontSize: fontSize2 ?? 14.0,
+                    fontWeight: fontWeight2,
+                    fontFamily: fontFamily2,
+                  ),
                 ),
               ),
             )
